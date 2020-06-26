@@ -1,4 +1,4 @@
-
+package misc;
 
 import java.util.Arrays;
 
@@ -8,7 +8,6 @@ public class ArrayListImpl {
 	String[] arr = new String[SIZE];
 	int logicalSize = 0;
 	String[] arr1;
-	int temp = SIZE;
 
 	public void add(String s) {
 		logicalSize++;
@@ -25,8 +24,8 @@ public class ArrayListImpl {
 	private String[] increaseSize(String[] arr2) {
 
 		SIZE = SIZE + SIZE / 2;
-		arr1 = Arrays.copyOf(arr, SIZE);
-		return arr1;
+		arr = Arrays.copyOf(arr, SIZE);
+		return arr;
 
 	}
 
@@ -35,7 +34,6 @@ public class ArrayListImpl {
 		for (int i = index; i < logicalSize; i++) {
 			if (i == index) {
 				s = arr[i];
-
 			}
 			arr[i] = arr[i + 1];
 		}
@@ -43,43 +41,22 @@ public class ArrayListImpl {
 		return s;
 	}
 
-	public void display(int index) {
-		String s = arr[index];
+	public String display(int index) {
 
-		System.out.println(arr[index]);
+		return arr[index];
 	}
 
 	public static void main(String[] args) {
 		ArrayListImpl a = new ArrayListImpl();
-		a.add("hello1");
-		a.add("hello2");
-		a.add("hello3");
-		a.add("hello4");
-		a.add("hello5");
-		a.add("hello6");
-		a.add("hello7");
-		a.add("hello8");
-		a.add("hello9");
-		a.add("hello10");
-		a.add("hello11");
-		a.add("hello12");
-		a.add("hello13");
-		a.add("hello14");
-		a.add("hello15");
-		a.add("hello16");
-		a.add("hello17");
-		a.add("hello18");
-		a.add("hello19");
-		a.add("hello20");
-		a.add("hello21");
-		a.add("hello22");
-		a.display(21);
-		a.display(14);
-		a.display(15);
+		for (int i = 0; i < 23; i++)
+			a.add("hello " + i);
+
+		System.out.println(a.display(21));
+		System.out.println(a.display(14));
+		System.out.println(a.display(15));
 		System.out.println(a.remove(10));
 
-		a.display(15);
+		System.out.println(a.display(15));
 
-		
 	}
 }
