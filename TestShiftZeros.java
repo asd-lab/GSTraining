@@ -8,7 +8,7 @@ class TestShiftZeros {
 	void test() {
 		int[] arr = {1,0,2,0,3,0};
 		int[] actual = ShiftZeros.shiftZeros(arr);
-		int expected[] = {1,2,3,0,0,0};
+		int expected[] = {0,0,0,1,2,3};
 		
 		assertArrayEquals(expected, actual);
 		
