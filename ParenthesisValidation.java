@@ -1,3 +1,4 @@
+package misc;
 
 import java.util.HashMap;
 import java.util.Stack;
@@ -39,6 +40,7 @@ public class ParenthesisValidation {
 	}
 	public static void main(String[] args) {
 		ParenthesisValidation ps = new ParenthesisValidation();
-		System.out.println(ps.isValid(""));
+		System.out.println(ps.isValid("()[]{}"));
 	}
 }
+
