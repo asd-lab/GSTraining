@@ -4,14 +4,22 @@ package misc;
 
 public class ReverseString { 
 
+	public static StringBuilder reverse(String str) {
+		String[] s = str.split(" ");
+		
+		StringBuilder ans=new StringBuilder(""); 
+		for (int i = s.length - 1; i >= 0; i--) { 
+			ans.append(s[i]); 
+			ans.append(" "); 
+		}
+		return ans;
+	}
+	
 	public static void main(String[] args) 
 	{ 
-		String s[] = "i like this program very much".split(" "); 
-		String ans = ""; 
-		for (int i = s.length - 1; i >= 0; i--) { 
-			ans += s[i] + " "; 
-		} 
-		System.out.println("Reversed String:"); 
-		System.out.println(ans.substring(0, ans.length() - 1)); 
+		String s = "i like this program very much"; 
+	
+		System.out.print("Reversed String: "); 
+		System.out.println(reverse(s)); 
 	} 
 } 
